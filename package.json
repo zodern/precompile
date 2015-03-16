@@ -2,9 +2,9 @@
   "name": "pre-compile",
   "version": "0.0.0",
   "description": "",
-  "main": "./precompile",
+  "main": "bash ./precompile",
   "scripts": {
-    "test": "./precompile"
+    "test": "bash ./precompile"
   },
   "repository": {
     "type": "git",
