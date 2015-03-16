@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
 #
-# Check basic functions (compiling and linking) works as expected
-#
-
-scripts/test || exit $?
-
-
-#
 # Strip libraries and binaries
 #
 
