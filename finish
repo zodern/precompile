@@ -15,3 +15,12 @@ rm -rf $TOOLS/{,share}/{info,man,doc}
 
 
 echo -e "${GRN}Successfully built a $TARGET cross-toolchain${CLR}"
+
+
+#
+# Create zip
+#
+
+zip -r out /out
+
+
