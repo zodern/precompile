@@ -1,0 +1,19 @@
+{
+  "name": "pre-compile",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./precompile",
+  "scripts": {
+    "test": "./precompile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zodern/precompile.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zodern/precompile/issues"
+  },
+  "homepage": "https://github.com/zodern/precompile"
+}
