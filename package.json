@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/zodern/precompile.git"
   },
+  "dependencies" : {
+    "gcloud": "*"
+  },
   "author": "",
   "license": "MIT",
   "bugs": {
