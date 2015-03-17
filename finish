@@ -29,6 +29,9 @@ echo "Zipping"
 
 zip -r -qdgds 50m out ./out || exit $?
 
+echo "Size of out.zip: "
+ls -sh out.zip
+
 #
 # Upload to gh-pages
 #
