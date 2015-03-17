@@ -21,7 +21,7 @@ echo -e "${GRN}Successfully built a $TARGET cross-toolchain${CLR}"
 # Create zip
 #
 
-zip -r out ./out
+zip -r out ./out || exit $?
 
 #
 # Upload to gh-pages
