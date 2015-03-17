@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - "0.10"
 env:
-	glbal:
-		-secure: lUJTQZwllnManyvwNW+AsxqGlt7dKu5+C8Mno+KzzDvOB87xz6QKG4OmSHM21YbeOgxk0vYitNkUcOlo9Ozyx9F5NHe64gKZBnbfK7gaNgAbamZS5YZgxiZDmgCK7LAc77ZNJ0cL/GZNmvhMVkq1l4Iwt92Bm5hCfJlPLWFB6PU=
-		-GH_REF: github.com/zodern/precompile
+        global:
+                -secure:lUJTQZwllnManyvwNW+AsxqGlt7dKu5+C8Mno+KzzDvOB87xz6QKG4$
+                -GH_REF:github.com/zodern/precompile
+
+
+
+
