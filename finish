@@ -16,6 +16,11 @@ rm -rf $TOOLS/{,share}/{info,man,doc}
 
 echo -e "${GRN}Successfully built a $TARGET cross-toolchain${CLR}"
 
+#
+# Delete extra files to free space
+#
+rm -rf deps
+rm -rf obj
 
 #
 # Create zip
@@ -35,5 +40,5 @@ mkdir deploy
  cp ../out.zip ./out.zip
  git add .
  git commit -m "Upload to GHPages"
- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
+ git push --force --quiet "https://${secret}@${GH_REF}" master:gh-pages > /dev/null 2>&1
 )
