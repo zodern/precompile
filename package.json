@@ -1,7 +1,6 @@
 {
   "name": "pre-compile",
   "version": "0.0.0",
-  "description": "",
   "main": "bash ./precompile",
   "scripts": {
     "test": "bash ./precompile"

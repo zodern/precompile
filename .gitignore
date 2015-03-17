@@ -2,3 +2,6 @@ deps
 obj
 out
 *.log
+*.save.*
+*.save
+node_modules
