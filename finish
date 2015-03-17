@@ -42,6 +42,4 @@ mkdir upload
  echo "copying zip file"
  cp ../out.zip ./out.zip
  cd ..
- npm install
- node upload.js
  )
