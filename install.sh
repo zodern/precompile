@@ -101,6 +101,7 @@ if [[ ! -d $OBJ_DIR ]]; then
 
     # Configure
     $SRC_DIR/configure                        \
+	--silent			      \
         --prefix=$TOOLS                       \
         --build=$HOST                         \
         --host=$HOST                          \
