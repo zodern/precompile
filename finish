@@ -6,7 +6,7 @@
 
 TOOLS=`pwd`/out
 
-source scripts/adjustEnvVars.sh || exit $?
+source adjustEnvVars.sh || exit $?
 
 $TARGET-strip --strip-debug    $TOOLS/{,$TARGET}/lib/* >> /dev/null
 $TARGET-strip --strip-unneeded $TOOLS/{,$TARGET}/bin/* >> /dev/null
