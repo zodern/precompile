@@ -32,8 +32,8 @@ zip -r -qdgds 50m out ./out || exit $?
 # Upload to gh-pages
 #
  
-mkdir deploy
-( cd deploy
+mkdir upload
+( cd upload
  git init
  git config user.name "Travis-CI"
  git config user.email "travis@node-os.com"
