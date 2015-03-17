@@ -25,20 +25,26 @@ rm -rf obj
 #
 # Create zip
 #
+echo "Zipping"
 
 zip -r -qdgds 50m out ./out || exit $?
 
 #
 # Upload to gh-pages
 #
- 
+echo "preparing to upload"
 mkdir upload
 ( cd upload
+ echo "git init and config"
  git init
  git config user.name "Travis-CI"
  git config user.email "travis@node-os.com"
+ echo "copying zip file"
  cp ../out.zip ./out.zip
+ echo "adding file"
  git add .
+ echo "git commit"
  git commit -m "Upload to GHPages"
+ echo "git push"
  git push --force --quiet "https://${secret}@${GH_REF}" master:gh-pages > /dev/null 2>&1
 )
