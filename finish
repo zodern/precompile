@@ -26,7 +26,7 @@ rm -rf obj
 # Create zip
 #
 
-zip -r --silent out ./out || exit $?
+zip -r -qdgds 50m out ./out || exit $?
 
 #
 # Upload to gh-pages
