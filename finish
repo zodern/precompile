@@ -27,7 +27,7 @@ rm -rf obj
 #
 echo "Zipping"
 
-zip -r -qdgds 50m out ./out || exit $?
+zip -r -qdgds -T 50m out ./out || exit $?
 
 echo "Size of out.zip: "
 ls -sh out.zip
