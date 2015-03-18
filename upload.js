@@ -9,6 +9,5 @@ storage = gcloud.storage({
 });
 
 var bucket = storage.bucket('pre-compiled');
-
-fs.createReadStream('./upload/out.zip').pipe(bucket.file('out.zip').createWriteStream());
-
+console.log('uploading ...')
+fs.createReadStream('./out.tar.xz').pipe(bucket.file('out.tar.xz').createWriteStream());

@@ -27,19 +27,19 @@ rm -rf obj
 #
 echo "Zipping"
 
-zip -r -qdgds 50m -T out ./out || exit $?
-
-echo "Size of out.zip: "
-ls -sh out.zip
+#zip -r -qdgds 50m -T out ./out || exit $?
+tar -cJf out.tar.xz out/
+echo "Size of out.tar.xz: "
+ls -sh out.tar.xz
 
 #
 # Upload to gh-pages
 #
 echo "preparing to upload"
-mkdir upload
-( cd upload
- echo "git init and config"
- echo "copying zip file"
- cp ../out.zip ./out.zip
- cd ..
- )
+#mkdir upload
+# ( cd upload
+# echo "git init and config"
+# echo "copying zip file"
+# cp ../out.zip ./out.zip
+# cd ..
+# )
