@@ -1,0 +1,33 @@
+{
+  "name": "NodeOS",
+  "version": "0.0.0",
+  "description": "Lightweight operating system using Node.js as userspace",
+  "bundleDependencies": [
+    "nodeos-barebones",
+    "nodeos-initramfs",
+    "nodeos-rootfs",
+    "nodeos-usersfs"
+  ],
+  "scripts": {
+    "BigRedButton": "scripts/BigRedButton",
+    "install": "scripts/install",
+    "start": "scripts/start",
+    "test": "scripts/test",
+    "uninstall": "scripts/uninstall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodeOS/NodeOS.git"
+  },
+  "keywords": [
+    "OS",
+    "Linux",
+    "npm"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NodeOS/NodeOS/issues"
+  },
+  "homepage": "http://node-os.com",
+  "private": true
+}

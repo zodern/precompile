@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "bash ./precompile",
   "scripts": {
-    "test": "bash ./precompile"
+    "test": "bash ./pre-compile/precompile"
   },
   "repository": {
     "type": "git",

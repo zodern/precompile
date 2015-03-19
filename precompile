@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-source adjustEnvVars.sh || exit $?
-
-source preinstall || exit $?
-
-source install.sh || exit $?
-
-source finish || exit $?

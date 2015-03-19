@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+REV=$(tput rev)
+BLD=$(tput bold)
+GRY="\e[90m"
+RED="\e[31m"
+GRN="\e[32m"
+WHT="\e[37m"
+CLR="\e[0m"
+
+
+if [[ -z "$PLATFORM" ]]; then PLATFORM=docker; fi
+
+
+function err(){
+  echo -e "${RED}Error Building Image${CLR}"
+  exit $1
+}
+
+
+case $PLATFORM in
+  docker)
+    # if user is logged into docker index
+    # automatically prefix their name to built images
+    name=$(docker info | grep ^Username | awk '{print $2}' )
+    if [[ -z "$name" ]]; then name=local; fi
+
+    NOSN=${name}/nodeos
+  ;;
+esac
+
+export PLATFORM
+
+
+## Build each layer up
+#(cd node_modules/nodeos-cross-toolchain              npm install ) &&
+#(cd node_modules/nodeos-barebones                    npm install ) &&
+#(cd node_modules/nodeos-initramfs                    npm install ) &&
+#(cd node_modules/nodeos-rootfs                       npm install ) &&
+#(cd node_modules/nodeos-usersfs         name=${NOSN} npm install ) || err $?
+
+echo -e "${GRY}------------------------------------------${CLR}"
+echo -e "${GRN}${BLD}Success!${CLR}"
+echo -e "${GRN}You Just Built a Custom NodeOS Image ${WHT}$NOSN${CLR}"
+echo -e "${GRY}------------------------------------------${CLR}"
+echo
+echo -e "- Interactively run your image with:"
+
+case $PLATFORM in
+  docker)
+    echo -e "${WHT}    docker run -t -i $NOSN${CLR}"
+    echo
+    echo -e "- Share your creation with:"
+    echo -e "${WHT}    docker push $NOSN${CLR}"
+  ;;
+  pc_qemu|raspberry_qemu)
+    echo -e "${WHT}    npm start${CLR}"
+  ;;
+esac

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+BASE = ../`pwd`
+UPLOAD = `pwd`/upload.js
+#
+# Precompile nodeos-cross-toolchain
+#
+source adjustEnvVars.sh || exit $?
+
+cd NodeOS/node_modules/node_modules/nodeos-cross-toolchain
+
+npm install || exit $?
+
+#
+# Compress and upload 
+#
+tar -cJf out.tar.xz out/
+node UPLOAD out.tar.xz cross-toolchain-out.tar.xz
+
+bash ./preinstall || exit $?
+
+bash ./install.sh || exit $?
+
+bash ./finish || exit $?
