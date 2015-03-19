@@ -7,7 +7,7 @@ UPLOAD=`pwd`/upload.js
 #
 source adjustEnvVars.sh || exit $?
 
-cd NodeOS/node_modules/node_modules/nodeos-cross-toolchain
+cd NodeOS/node_modules/nodeos-barebones/node_modules/nodeos-cross-toolchain
 
 npm install || exit $?
 
@@ -17,8 +17,13 @@ npm install || exit $?
 tar -cJf out.tar.xz out/
 node UPLOAD out.tar.xz cross-toolchain-out.tar.xz
 
-bash ./preinstall || exit $?
+#
+# Compress and upload NodeJS
+#
+cd $BASE
 
-bash ./install.sh || exit $?
+#bash ./preinstall || exit $?
 
-bash ./finish || exit $?
+#bash ./install.sh || exit $?
+
+#bash ./finish || exit $?
